@@ -27,6 +27,13 @@ header h1 {
     margin-bottom: 5px;
 }
 
+.logo {
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 200px;
+    height: auto;
+}
+
 header p {
     color: #7f8c8d;
     font-size: 0.9rem;
