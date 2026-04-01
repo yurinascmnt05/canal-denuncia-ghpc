@@ -170,3 +170,12 @@ button:active {
     background-color: #95a5a6; 
     margin-top: 20px; 
 }
+
+body {
+    background-color: #f4f7f6;
+    display: flex;
+    flex-direction: column; /* Alinha o container e o footer um embaixo do outro */
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+}
