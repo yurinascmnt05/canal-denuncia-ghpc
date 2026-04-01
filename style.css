@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #34495e;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dcdde1;
+    border-radius: 8px;
+    font-size: 16px; /* Evita zoom automático no iOS */
+    background: #fafafa;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:active {
+    background-color: #c0392b;
+}
+
+.hidden { display: none; }
+
+.card-sucesso {
+    text-align: center;
+    background: #d4edda;
+    color: #155724;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#protocoloNum {
+    font-size: 1.4rem;
+    display: block;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+.consulta-container {
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.divisor {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin-bottom: 25px;
+}
+
+.consulta-container h3 {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.input-group-inline {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.input-group-inline input {
+    flex: 2;
+    text-transform: uppercase; /* Facilita a visualização do código */
+}
+
+.input-group-inline button {
+    flex: 1;
+    background-color: #34495e;
+    padding: 10px;
+}
+
+.status-card {
+    margin-top: 15px;
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #3498db;
+    text-align: left;
+}
+
+#statusTexto {
+    font-weight: bold;
+    color: #2980b9;
+    text-transform: uppercase;
+}
+
+.card-denuncia { 
+    background: #fff; 
+    padding: 15px; 
+    border-radius: 10px; 
+    margin-bottom: 15px; 
+    border-left: 5px solid #3498db; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+    text-align: left;
+}
+
+.card-denuncia.pendente { border-left-color: #f1c40f; }
+.card-denuncia.tratamento { border-left-color: #3498db; }
+.card-denuncia.resolvido { border-left-color: #2ecc71; }
+
+.badge { 
+    font-size: 0.7rem; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    padding: 3px 8px; 
+    border-radius: 4px; 
+    color: #fff; 
+    float: right;
+}
+
+.bg-pendente { background: #f1c40f; }
+.bg-tratamento { background: #3498db; }
+.bg-resolvido { background: #2ecc71; }
+
+#btnLogout { 
+    background-color: #95a5a6; 
+    margin-top: 20px; 
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Canal de Ética - Denúncia Anônima</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Canal de Denúncia</h1>
+            <p>Seu relato é totalmente anônimo e seguro.</p>
+        </header>
+
+        <form id="denunciaForm">
+            <div class="input-group">
+                <label for="categoria">Categoria da Ocorrência</label>
+                <select id="categoria" required>
+                    <option value="">Selecione...</option>
+                    <option value="assedio">Assédio ou Discriminação</option>
+                    <option value="fraude">Fraude ou Corrupção</option>
+                    <option value="seguranca">Segurança do Trabalho</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="relato">Descrição dos Fatos</label>
+                <textarea id="relato" rows="6" placeholder="Detalhe o máximo possível o ocorrido..." required></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="local">Local/Departamento</label>
+                <input type="text" id="local" placeholder="Ex: Galpão A, RH, Financeiro...">
+            </div>
+
+            <button type="submit" id="btnEnviar">Enviar Denúncia Anônima</button>
+        </form>
+
+        <div class="consulta-container">
+            <hr class="divisor">
+            <h3>Já fez uma denúncia?</h3>
+            <p>Insira seu protocolo para verificar o andamento:</p>
+            
+            <div class="input-group-inline">
+                <input type="text" id="inputProtocolo" placeholder="Ex: 4K8LW" maxlength="6">
+                <button type="button" id="btnConsultar">Consultar</button>
+            </div>
+
+            <div id="resultadoConsulta" class="hidden">
+                <div class="status-card">
+                    <p><strong>Status Atual:</strong> <span id="statusTexto">---</span></p>
+                    <p><small>Última atualização: <span id="dataAtualizacao">--/--/--</span></small></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="sucessoMsg" class="hidden">
+            <div class="card-sucesso">
+                <h3>Enviado com sucesso!</h3>
+                <p>Anote seu protocolo de acompanhamento:</p>
+                <strong id="protocoloNum">-----</strong>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px; text-align: center; padding-bottom: 20px;">
+        <a href="login.html" style="color: #7f8c8d; text-decoration: none; font-size: 0.85rem; font-family: sans-serif; border: 1px solid #dcdde1; padding: 8px 15px; border-radius: 20px; transition: 0.3s; background-color: #ffffff; display: inline-block;">
+            🔒 Acesso Administrativo
+        </a>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

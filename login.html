@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Administrativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container" style="margin-top: 50px;">
+        <header>
+            <h1>Painel Admin</h1>
+            <p>Identifique-se para gerenciar as denúncias.</p>
+        </header>
+        <div class="input-group">
+            <label>E-mail</label>
+            <input type="email" id="email" placeholder="admin@empresa.com">
+        </div>
+        <div class="input-group">
+            <label>Senha</label>
+            <input type="password" id="senha" placeholder="******">
+        </div>
+        <button id="btnLogin">Entrar</button>
+        <br>
+        <a href="index.html" style="display:block; text-align:center; margin-top:15px; font-size:0.8rem; color:#7f8c8d;">Voltar ao início</a>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBL2NbPtDpNTg9A8O7Ry6CvRtIIcsP_cR0",
+            authDomain: "denuncia-ghpc.firebaseapp.com",
+            projectId: "denuncia-ghpc",
+            storageBucket: "denuncia-ghpc.firebasestorage.app",
+            messagingSenderId: "631206782173",
+            appId: "1:631206782173:web:a8435c641baefadbb86734"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        document.getElementById('btnLogin').addEventListener('click', async () => {
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            try {
+                await signInWithEmailAndPassword(auth, email, senha);
+                window.location.href = "admin.html"; // Vai para a gestão se der certo
+            } catch (error) {
+                alert("Falha no login: " + error.message);
+            }
+        });
+    </script>
+</body>
+</html>
